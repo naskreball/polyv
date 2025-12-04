@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🌱 Система полива"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Статус -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Не подключено"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="#F5F5F5"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Кнопка подключения -->
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Подключиться"
+        android:textSize="16sp"
+        android:backgroundTint="#2196F3"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Кнопки управления -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Статус"
+            android:enabled="false"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btnSoil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Влажность"
+            android:enabled="false"
+            android:layout_marginStart="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Полив -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnShortPump"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1 секунда"
+            android:enabled="false"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btnPumpOn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3 секунды"
+            android:enabled="false"
+            android:backgroundTint="#FF9800"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"/>
+
+        <Button
+            android:id="@+id/btnPumpOff"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="СТОП"
+            android:enabled="false"
+            android:backgroundTint="#F44336"
+            android:layout_marginStart="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Авторежим -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/btnAutoOn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Авто ВКЛ"
+            android:enabled="false"
+            android:backgroundTint="#2196F3"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+        android:id="@+id/btnAutoOff"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Авто ВЫКЛ"
+        android:enabled="false"
+        android:backgroundTint="#9E9E9E"
+        android:layout_marginStart="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Информация -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wi-Fi: PolivSystem
+Пароль: 12345678
+IP: 192.168.4.1"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="#E3F2FD"/>
+
+</LinearLayout>
